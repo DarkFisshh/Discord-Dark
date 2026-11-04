@@ -1,0 +1,21 @@
+{
+  "name": "street-spotter",
+  "version": "1.0.0",
+  "description": "Multiplayer Street View bingo: find words in Street View, vote on each other's captures, score points.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "d3-geo": "^3.1.2",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2",
+    "ws": "^8.22.1"
+  }
+}
