@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Street Spotter</title>
+  <meta name="description" content="Multiplayer Street View bingo. Find every word somewhere in the world before the timer runs out, then vote on each other's finds.">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" id="brand">
+      <img src="icon.svg" alt="" width="28" height="28">
+      <span>Street Spotter</span>
+    </a>
+    <div class="topbar-center" id="topbar-center"></div>
+    <div class="topbar-right" id="topbar-right"></div>
+  </header>
+
+  <main id="app"></main>
+
+  <!-- The map / panorama lives outside #app so it survives re-renders and is only billed once. -->
+  <section id="explore" class="explore hidden">
+    <div id="map" class="map"></div>
+    <div id="explore-hint" class="explore-hint"></div>
+    <button id="exit-sv" class="btn exit-sv hidden" title="Back to the map (Esc)">✕ Back to map <kbd>Esc</kbd></button>
+  </section>
+  <section id="vote-pano-wrap" class="vote-pano-wrap hidden">
+    <div id="vote-pano" class="vote-pano"></div>
+  </section>
+
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
