@@ -57,9 +57,10 @@ uses a few dozen of Google's free monthly Street View loads.
 
 ### Putting it online for your friends
 
-- **Render (free)**: push this repo to GitHub, then go to render.com → *New* → *Blueprint*
-  and select the repo. `render.yaml` is already set up. Add `GOOGLE_MAPS_API_KEY` when
-  asked. Free instances sleep when idle, so the first visit takes about 30 seconds.
+- **Render (free)**: on render.com go to *New* → *Web Service*, connect this GitHub repo,
+  and set *Root Directory* to `street-spotter`, *Build Command* to `npm ci`, and
+  *Start Command* to `node server.js`. Add the environment variable `GOOGLE_MAPS_API_KEY`.
+  Free instances sleep when idle, so the first visit takes about 30 seconds.
 - **Docker**: `docker build -t street-spotter . && docker run -p 3000:3000 -e GOOGLE_MAPS_API_KEY=... street-spotter`
 - **Your own PC**: run `npm start` and share it with a tunnel such as
   `cloudflared tunnel --url http://localhost:3000`.
